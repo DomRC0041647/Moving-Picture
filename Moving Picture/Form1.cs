@@ -26,10 +26,14 @@ namespace Moving_Picture
                 
         } 
 
-        private void Button4_Click(object sender, EventArgs e)
+        private async void Button4_ClickAsync(object sender, EventArgs e)
         {
-            if (pictureBox1.Location.X < ClientRectangle.Width - pictureBox1.Width)
+            while (pictureBox1.Location.X + 5 < ClientRectangle.Width - pictureBox1.Width)
+            {
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
+                await Task.Delay(100);
+            }
+            
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -38,15 +42,25 @@ namespace Moving_Picture
                 pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 5);
         }
 
-        private void Button3_Click(object sender, EventArgs e)
+        private async void Button3_ClickAsync(object sender, EventArgs e)
         {
-            if (pictureBox1.Location.X > 0)
+            while (pictureBox1.Location.X - 5 < ClientRectangle.Width - pictureBox1.Width)
+            {
                 pictureBox1.Location = new Point(pictureBox1.Location.X - 5, pictureBox1.Location.Y);
+                await Task.Delay(100);
+            }
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        private async void Button5_ClickAsync(object sender, EventArgs e)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        {
+            
         }
     }      
 }

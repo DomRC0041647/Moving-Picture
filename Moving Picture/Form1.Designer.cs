@@ -68,7 +68,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "LEFT";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_ClickAsync);
             // 
             // button4
             // 
@@ -79,7 +79,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "RIGHT";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_ClickAsync);
             // 
             // pictureBox1
             // 
