@@ -24,17 +24,17 @@ namespace Moving_Picture
                 pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 5);
             }
                 
-        }
+        } 
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Location.X < ClientRectangle.Width)
+            if (pictureBox1.Location.X < ClientRectangle.Width - pictureBox1.Width)
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Location.Y < ClientRectangle.Height)
+            if (pictureBox1.Location.Y < ClientRectangle.Height - pictureBox1.Height)
                 pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 5);
         }
 
